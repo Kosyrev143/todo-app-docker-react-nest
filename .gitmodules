@@ -1,3 +1,3 @@
-[submodule "server"]
-	path = server
+[submodule "server/Todo-App1"]
+	path = server/Todo-App1
 	url = https://github.com/Kosyrev143/todo-app-docker-react-nest
