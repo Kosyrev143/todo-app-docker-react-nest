@@ -1,0 +1,3 @@
+[submodule "server"]
+	path = server
+	url = https://github.com/Kosyrev143/todo-app-docker-react-nest
