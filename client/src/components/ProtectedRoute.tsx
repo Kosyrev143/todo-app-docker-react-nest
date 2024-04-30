@@ -1,9 +1,7 @@
-import React, {FC} from 'react';
-import {useNavigate} from "react-router-dom";
+import  {FC} from 'react';
 import {useAuth} from "../hooks/useAuth.ts";
 import { FaShieldHalved } from "react-icons/fa6";
 
-const navigate = useNavigate()
 
 interface Props{
     children:JSX.Element

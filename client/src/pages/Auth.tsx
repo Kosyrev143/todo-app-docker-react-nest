@@ -2,8 +2,8 @@ import React, { FC, useState } from "react";
 import { toast } from "react-toastify";
 import instance from "../api/axios.api.ts";
 import {useNavigate} from "react-router-dom";
-import {useAppDispatch, useAppSelector} from "../store/hooks.ts";
-import { login, logout } from '../store/user/userSlice.ts';
+import {useAppDispatch} from "../store/hooks.ts";
+import { login } from '../store/user/userSlice.ts';
 
 const Auth: FC = () => {
     const [email, setEmail] = useState<string>('');

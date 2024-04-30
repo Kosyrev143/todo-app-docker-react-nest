@@ -1,8 +1,7 @@
 import {FC} from "react";
 import {Link, NavLink, useNavigate} from "react-router-dom";
-import {FaBtc, FaSignOutAlt} from "react-icons/fa";
+import { FaSignOutAlt} from "react-icons/fa";
 import { RiCalendarTodoFill } from "react-icons/ri";
-import auth from "../pages/Auth.tsx";
 import {useAuth} from "../hooks/useAuth.ts";
 import {useAppDispatch} from "../store/hooks.ts";
 import {logout} from "../store/user/userSlice.ts";

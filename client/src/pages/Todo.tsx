@@ -10,7 +10,6 @@ interface TodoModel{
 }
 const Todo: FC = () => {
     const [todos, setTodos] = React.useState<TodoModel[]>([]);
-    const [newTask, setNewTask] = useState<string>("");
     const title:any = React.useRef();
     const getAllNotCompletedTodos = async () =>{
         const userId = getLoginInfo()?.userId;
@@ -68,7 +67,8 @@ const Todo: FC = () => {
                         <h3 className="text-lg font-semibold mb-2">{todo.title}</h3>
                         <p className="text-sm mb-2">Дата: {todo.date}</p>
                         <div className="flex justify-between">
-                            <div>
+                            <div className="flex justify-center
+                            ">
                                 <button onClick={async () => {
                                     const response = await instance.patch(`/todo/${todo.id}`);
                                     getAllNotCompletedTodos();
