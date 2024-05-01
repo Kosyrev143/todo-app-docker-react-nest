@@ -43,6 +43,7 @@ const Todo: FC = () => {
         }
     }
 
+
     React.useEffect(()=>{
         if(todos.length==0)getAllNotCompletedTodos()
     })
