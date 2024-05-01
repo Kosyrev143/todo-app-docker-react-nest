@@ -51,7 +51,7 @@ const Todo: FC = () => {
     return (
         <div className={'mt-40 flex flex-col justify-center items-center bg-gray-700 text-white'}>
             <h1 className={'mb-10 text-center text-xl'}>
-                Задачи
+                Мои Задачи
             </h1>
 
             <form
@@ -73,9 +73,11 @@ const Todo: FC = () => {
                                     const response = await instance.patch(`/todo/${todo.id}`);
                                     getAllNotCompletedTodos();
                                     toast.success('Задача выполнена')
-                                }} className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mr-2">
+                                }}
+                                        className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mr-2">
                                     Отметить как выполненное
                                 </button>
+
                                 <button onClick={async () => {
                                     const response = await instance.delete(`/todo/${todo.id}`);
                                     getAllNotCompletedTodos();
@@ -89,24 +91,8 @@ const Todo: FC = () => {
                 ))}
 
 
-
             </form>
 
-            {/*<ul className="mt-5">*/}
-            {/*    {tasks.map((task, index) => (*/}
-            {/*        <li key={index} className="flex items-center justify-between w-1/3 bg-gray-800 text-white rounded p-2">*/}
-            {/*            <span>{task}</span>*/}
-            {/*            <div>*/}
-            {/*                <button onClick={() => deleteTask(index)} className={'btn btn-red'}>*/}
-            {/*                    Удалить*/}
-            {/*                </button>*/}
-            {/*                <button onClick={() => editTask(index, "Updated Task")} className={'btn btn-blue ml-2'}>*/}
-            {/*                    Редактировать*/}
-            {/*                </button>*/}
-            {/*            </div>*/}
-            {/*        </li>*/}
-            {/*    ))}*/}
-            {/*</ul>*/}
         </div>
     );
 };
